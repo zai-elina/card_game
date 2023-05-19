@@ -1,0 +1,9 @@
+@media(max-width:426px){
+    .complexity{
+        width: 350px;
+        &__level{
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
