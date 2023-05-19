@@ -42,7 +42,11 @@ body{
         display: flex;
         gap: 24px;
         justify-content: center;
+        & input[type="radio"] {
+            display: none;
+        }
     }
+     
     &__level{
         width: 98px;
         height: 98px;

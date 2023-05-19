@@ -42,6 +42,9 @@ body {
   gap: 24px;
   justify-content: center;
 }
+.complexity__levels input[type=radio] {
+  display: none;
+}
 .complexity__level {
   width: 98px;
   height: 98px;
