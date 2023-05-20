@@ -12,15 +12,41 @@
       <h1 class="complexity__title">Выбери сложность</h1>
       <form action="" class="complexity__form">
         <div class="complexity__levels">
-          <input type="radio" value="1" id="radio1" />
-          <label for="radio1" class="complexity__level">1</label>
-          <input type="radio" value="2" id="radio2" />
-          <label for="radio2" class="complexity__level">2</label>
-          <input type="radio" value="3" id="radio3" />
-          <label for="radio3" class="complexity__level">3</label>
+          <div class="complexity__level">
+            <input
+              type="radio"
+              name="level"
+              class="radio-input"
+              value="1"
+              id="radio1"
+            />
+            <label for="radio1">1</label>
+          </div>
+          <div class="complexity__level">
+            <input
+              type="radio"
+              name="level"
+              class="radio-input"
+              value="2"
+              id="radio2"
+            />
+            <label for="radio2">2</label>
+          </div>
+          <div class="complexity__level">
+            <input
+              type="radio"
+              name="level"
+              class="radio-input"
+              value="3"
+              id="radio3"
+            />
+            <label for="radio3">3</label>
+          </div>
         </div>
-        <button class="complexity__button">Старт</button>
+        <button class="complexity__button btn-start">Старт</button>
       </form>
     </section>
+
+    <script src="./main.js"></script>
   </body>
 </html>
