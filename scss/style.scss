@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: StratosSkyeng;
+    src: url("fonts/stratosskyengweb-semilight.woff2") format("woff2"),
+        url("fonts/stratosskyengweb-semilight.woff") format("woff");
+}
+
+body {
+    font-family: StratosSkyeng, sans-serif;
+    background: #004980;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.complexity {
+    margin: 158px auto;
+    width: 480px;
+    height: 459px;
+    background: #c2f5ff;
+    border-radius: 12px;
+    padding-top: 52px;
+    text-align: center;
+
+    &__title {
+        margin: 0 auto;
+        max-width: 208px;
+        color: #004980;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        font-feature-settings: "pnum" on, "lnum" on;
+    }
+
+    &__levels {
+        margin-top: 48px;
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+
+        & input[type="radio"] {
+            display: none;
+        }
+    }
+
+    &__level {
+        width: 98px;
+        height: 98px;
+        background: #fff;
+        border-radius: 12px;
+        font-size: 64px;
+        line-height: 72px;
+        color: #0080c1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.07);
+            cursor: pointer;
+        }
+    }
+
+    &__button {
+        margin-top: 67px;
+    }
+}
+
+button {
+    width: 246px;
+    height: 50px;
+    background: #7ac100;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s;
+
+    &:hover {
+        background: rgba(122, 193, 0, 70%);
+    }
+}
+
+.cards {
+    padding: 22px 100px 0;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        margin-top: 35px;
+        display: flex;
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.time {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 155px;
+
+    &__units {
+        margin-left: 39px;
+        font-size: 16px;
+        line-height: 32px;
+        font-feature-settings: "pnum" on, "lnum" on;
+        color: #fff;
+
+        &--sek {
+            margin-left: 65px;
+        }
+    }
+
+    &__value {
+        margin-top: -10px;
+        font-size: 64px;
+        line-height: 72px;
+        color: #fff;
+    }
+}
+
+.card {
+    max-width: 95px;
+    height: 133px;
+    background: #fff;
+    border-radius: 4px;
+
+    &__image {
+        margin: 6px;
+        background: #e4fbff;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cards {
+        padding: 22px;
+
+        &__wrapper {
+            justify-content: start;
+        }
+    }
+}
+
+@import "mobile";
