@@ -3,17 +3,19 @@
   padding: 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 @font-face {
-  font-family: "StratosSkyeng";
+  font-family: StratosSkyeng;
   src: url("fonts/stratosskyengweb-semilight.woff2") format("woff2"), url("fonts/stratosskyengweb-semilight.woff") format("woff");
 }
 body {
+  font-family: StratosSkyeng, sans-serif;
   background: #004980;
-  font-family: "StratosSkyeng";
   font-weight: 400;
   font-style: normal;
 }
@@ -22,7 +24,7 @@ body {
   margin: 158px auto;
   width: 480px;
   height: 459px;
-  background: #C2F5FF;
+  background: #c2f5ff;
   border-radius: 12px;
   padding-top: 52px;
   text-align: center;
@@ -48,11 +50,11 @@ body {
 .complexity__level {
   width: 98px;
   height: 98px;
-  background: #FFFFFF;
+  background: #fff;
   border-radius: 12px;
   font-size: 64px;
   line-height: 72px;
-  color: #0080C1;
+  color: #0080c1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,22 +66,83 @@ body {
 }
 .complexity__button {
   margin-top: 67px;
+}
+
+button {
   width: 246px;
   height: 50px;
-  background: #7AC100;
-  font-family: "StratosSkyeng";
+  background: #7ac100;
+  font-family: StratosSkyeng, sans-serif;
   font-size: 24px;
   line-height: 32px;
   font-feature-settings: "pnum" on, "lnum" on;
-  color: #FFFFFF;
+  color: #fff;
   border: none;
   border-radius: 12px;
   transition: all 0.5s;
 }
-.complexity__button:hover {
+button:hover {
   background: rgba(122, 193, 0, 0.7);
 }
 
+.cards {
+  padding: 22px 100px 0;
+}
+.cards__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards__wrapper {
+  margin-top: 35px;
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.time {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 155px;
+}
+.time__units {
+  margin-left: 39px;
+  font-size: 16px;
+  line-height: 32px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #fff;
+}
+.time__units--sek {
+  margin-left: 65px;
+}
+.time__value {
+  margin-top: -10px;
+  font-size: 64px;
+  line-height: 72px;
+  color: #fff;
+}
+
+.card {
+  max-width: 95px;
+  height: 133px;
+  background: #fff;
+  border-radius: 4px;
+}
+.card__image {
+  margin: 6px;
+  background: #e4fbff;
+  border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    padding: 22px;
+  }
+  .cards__wrapper {
+    justify-content: start;
+  }
+}
 @media (max-width: 426px) {
   .complexity {
     width: 350px;
@@ -87,5 +150,8 @@ body {
   .complexity__level {
     width: 80px;
     height: 80px;
+  }
+  .cards__title {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

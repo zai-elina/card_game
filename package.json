@@ -1,0 +1,32 @@
+{
+    "name": "card_name",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write ./",
+        "lint:js": "eslint ./**/*.js",
+        "lint:scss": "stylelint ./**/*.scss",
+        "lint": "npm run lint:js && npm run lint:scss",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zai-elina/card_game.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^8.41.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.8",
+        "stylelint": "^15.6.2",
+        "stylelint-config-prettier": "^9.0.5",
+        "stylelint-config-standard": "^33.0.0",
+        "stylelint-config-standard-scss": "^9.0.0",
+        "stylelint-prettier": "^3.0.0"
+    }
+}
