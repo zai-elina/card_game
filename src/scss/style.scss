@@ -11,8 +11,8 @@
 
 @font-face {
     font-family: StratosSkyeng;
-    src: url("fonts/stratosskyengweb-semilight.woff2") format("woff2"),
-        url("fonts/stratosskyengweb-semilight.woff") format("woff");
+    src: url("../fonts/stratosskyengweb-semilight.woff2") format("woff2"),
+        url("../fonts/stratosskyengweb-semilight.woff") format("woff");
 }
 
 body {
@@ -49,6 +49,8 @@ body {
 
         & input[type="radio"] {
             display: none;
+            max-width: 98px;
+            min-height: 98px;
         }
     }
 
@@ -125,7 +127,7 @@ button {
         color: #fff;
 
         &--sek {
-            margin-left: 65px;
+            margin-left: 60px;
         }
     }
 
@@ -148,6 +150,10 @@ button {
         background: #e4fbff;
         border-radius: 4px;
     }
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 1024px) {

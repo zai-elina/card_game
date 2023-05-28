@@ -2,14 +2,15 @@
     "name": "card_name",
     "version": "1.0.0",
     "description": "",
-    "main": "main.js",
+    "main": "./src/js/main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write ./",
         "lint:js": "eslint ./**/*.js",
-        "lint:scss": "stylelint ./**/*.scss",
-        "lint": "npm run lint:js && npm run lint:scss",
-        "prepare": "husky install"
+        "lint": "npm run lint:js",
+        "prepare": "husky install",
+        "build": "set NODE_ENV=production && webpack",
+        "start": "webpack-dev-server --open"
     },
     "repository": {
         "type": "git",
@@ -18,15 +19,21 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.7.4",
+        "css-minimizer-webpack-plugin": "^5.0.0",
         "eslint": "^8.41.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^4.2.1",
+        "html-webpack-plugin": "^5.5.1",
         "husky": "^8.0.3",
+        "mini-css-extract-plugin": "^2.7.6",
         "prettier": "^2.8.8",
-        "stylelint": "^15.6.2",
-        "stylelint-config-prettier": "^9.0.5",
-        "stylelint-config-standard": "^33.0.0",
-        "stylelint-config-standard-scss": "^9.0.0",
-        "stylelint-prettier": "^3.0.0"
+        "sass": "^1.62.1",
+        "sass-loader": "^13.3.0",
+        "style-loader": "^3.3.3",
+        "webpack": "^5.84.1",
+        "webpack-cli": "^5.1.1",
+        "webpack-dev-server": "^4.15.0"
     }
 }
