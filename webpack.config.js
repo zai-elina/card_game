@@ -36,14 +36,6 @@ module.exports = {
             template: "./index.html",
             filename: "index.html",
         }),
-        new HtmlWebpackPlugin({
-            template: "./game.html",
-            filename: "game.html",
-        }),
-        new HtmlWebpackPlugin({
-            template: "./start_game.html",
-            filename: "start_game.html",
-        }),
         new MiniCssExtractPlugin({
             filename: "style.css",
         }),
