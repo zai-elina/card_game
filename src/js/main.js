@@ -1,7 +1,7 @@
 import "../scss/style.scss";
 import { createMenu } from "./cardMenu.js";
 
-const renderApp = () =>{
+const renderApp = () => {
     createMenu();
 };
 

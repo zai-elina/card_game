@@ -36,14 +36,13 @@ export const createCardList = (cardsContainer, countCard) => {
     const openCards = document.querySelectorAll(".card__open-image");
 
     setTimeout(() => {
-        for(const openCard of openCards){
-            openCard.classList.add('hidden');
+        for (const openCard of openCards) {
+            openCard.classList.add("hidden");
         }
-        for(const closeCard of closedCards){
-            closeCard.classList.remove('hidden');
+        for (const closeCard of closedCards) {
+            closeCard.classList.remove("hidden");
         }
-        }
-    , 3000);
+    }, 3000);
 
     return gameCards;
 };

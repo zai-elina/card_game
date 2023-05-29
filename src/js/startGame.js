@@ -24,7 +24,7 @@ export const startGame = (countCard) => {
 
     const cardsContainer = document.querySelector(".cards__wrapper");
     const restart = document.querySelector(".start-again");
-    const cardsArray = createCardList(cardsContainer, countCard);
+    createCardList(cardsContainer, countCard);
     const cardsList = document.querySelectorAll(".cards_item");
 
     restart.addEventListener("submit", () => {
@@ -41,15 +41,15 @@ export const startGame = (countCard) => {
 
                 if (firstCard === null) {
                     firstCard = index;
-                } else if (index != firstCard) {
+                } else if (index !== firstCard) {
                     secondCard = index;
                     clickable = false;
                 }
 
                 if (
-                    firstCard != null &&
-                    secondCard != null &&
-                    firstCard != secondCard
+                    firstCard !== null &&
+                    secondCard !== null &&
+                    firstCard !== secondCard
                 ) {
                     if (
                         cardsList[firstCard].dataset.card ===
@@ -69,7 +69,6 @@ export const startGame = (countCard) => {
                                 alert("Вы выграли!");
                                 startGame(countCard);
                             }
-
                         }, 500);
                     } else {
                         setTimeout(() => {
