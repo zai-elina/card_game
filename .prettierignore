@@ -1,1 +1,4 @@
 node_modules/
+dist/
+src/scss/sryle.css
+src/scss/sryle.css.map

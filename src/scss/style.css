@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: StratosSkyeng;
-  src: url("fonts/stratosskyengweb-semilight.woff2") format("woff2"), url("fonts/stratosskyengweb-semilight.woff") format("woff");
+  src: url("../fonts/stratosskyengweb-semilight.woff2") format("woff2"), url("../fonts/stratosskyengweb-semilight.woff") format("woff");
 }
 body {
   font-family: StratosSkyeng, sans-serif;
