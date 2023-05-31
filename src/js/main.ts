@@ -1,5 +1,5 @@
 import "../scss/style.scss";
-import { createMenu } from "./cardMenu.js";
+import { createMenu } from "./cardMenu";
 
 const renderApp = () => {
     createMenu();

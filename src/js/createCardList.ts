@@ -1,12 +1,18 @@
-import { shuffle } from "./help.js";
+import { shuffle } from "./help";
+import {startTimer} from "./timer"
 
-export const createCardList = (cardsContainer, countCard) => {
+export const createCardList = (
+    cardsContainer: HTMLElement,
+    countCard: number,
+    second: HTMLElement,
+    minute: HTMLElement
+) => {
     const cardSuit = ["пики", "черви", "бубны", "крести"];
     const rang = [6, 7, 8, 9, 10, "валет", "дама", "король", "туз"];
-    let gameCards = [];
+    let gameCards: { [key: string]: string | number }[] = [];
 
     for (let i = 0; i < countCard / 2; i++) {
-        let obj = {};
+        let obj: { [key: string]: string | number } = {};
         let suit = cardSuit[Math.floor(Math.random() * cardSuit.length)];
         let card = rang[Math.floor(Math.random() * rang.length)];
         obj[suit] = card;
@@ -42,7 +48,11 @@ export const createCardList = (cardsContainer, countCard) => {
         for (const closeCard of closedCards) {
             closeCard.classList.remove("hidden");
         }
+        if (second !== null && minute !== null) {
+            startTimer(second, minute);
+        }
     }, 3000);
+
 
     return gameCards;
 };
