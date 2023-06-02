@@ -1,9 +1,16 @@
-import { startGame } from "./startGame.js";
+import { startGame } from "./startGame";
+
+declare global {
+    interface Window {
+        level: number;
+    }
+}
 
 export const createMenu = () => {
     const appHtml = document.querySelector(".app");
 
-    appHtml.innerHTML = `<section class="complexity">
+    if (appHtml !== null) {
+        appHtml.innerHTML = `<section class="complexity">
                 <h1 class="complexity__title">Выбери сложность</h1>
                 <form action="" class="complexity__form">
                     <div class="complexity__levels">
@@ -42,25 +49,27 @@ export const createMenu = () => {
                 </form>
             </section>`;
 
-    const gameLevels = document.querySelectorAll(".radio-input");
-    const formForLevels = document.querySelector(".complexity__form");
+        const gameLevels =
+            document.querySelectorAll<HTMLInputElement>(".radio-input");
+        const formForLevels = document.querySelector(".complexity__form");
 
-    formForLevels.addEventListener("submit", () => {
-        for (const gameLevel of gameLevels) {
-            if (gameLevel.checked) {
-                window.level = +gameLevel.value;
-                let countCard;
-                if (window.level === 1) {
-                    countCard = 6;
-                    startGame(countCard);
-                } else if (window.level === 2) {
-                    countCard = 12;
-                    startGame(countCard);
-                } else if (window.level === 3) {
-                    countCard = 18;
-                    startGame(countCard);
+        formForLevels?.addEventListener("submit", () => {
+            for (let gameLevel of gameLevels) {
+                if (gameLevel.checked) {
+                    window.level = +gameLevel.value;
+                    let countCard;
+                    if (window.level === 1) {
+                        countCard = 6;
+                        startGame(countCard);
+                    } else if (window.level === 2) {
+                        countCard = 12;
+                        startGame(countCard);
+                    } else if (window.level === 3) {
+                        countCard = 18;
+                        startGame(countCard);
+                    }
                 }
             }
-        }
-    });
+        });
+    }
 };
