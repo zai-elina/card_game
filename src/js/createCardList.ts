@@ -7,8 +7,8 @@ export const createCardList = (
     second: HTMLElement,
     minute: HTMLElement
 ) => {
-    const cardSuit = ["пики", "черви", "бубны", "крести"];
-    const rang = [6, 7, 8, 9, 10, "валет", "дама", "король", "туз"];
+    const cardSuit = ["spades", "hearts", "diamonds", "crosses"];
+    const rang = [6, 7, 8, 9, 10, "jack", "queen", "king", "ace"];
     let gameCards: { [key: string]: string | number }[] = [];
 
     for (let i = 0; i < countCard / 2; i++) {
