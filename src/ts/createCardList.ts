@@ -13,8 +13,18 @@ export const createCardList = (
 
     for (let i = 0; i < countCard / 2; i++) {
         const obj: { [key: string]: string | number } = {};
-        const suit = cardSuit[Math.floor(Math.random() * cardSuit.length)];
-        const card = rang[Math.floor(Math.random() * rang.length)];
+        let suit: string;
+        let card: string | number;
+        do {
+            suit = cardSuit[Math.floor(Math.random() * cardSuit.length)];
+            card = rang[Math.floor(Math.random() * rang.length)];
+        } while (
+            gameCards.some(
+                (item) =>
+                    Object.values(item)[0] === card &&
+                    Object.keys(item)[0] === suit
+            )
+        );
         obj[suit] = card;
         gameCards.push(obj);
         gameCards.push(obj);
@@ -52,6 +62,4 @@ export const createCardList = (
             startTimer(second, minute);
         }
     }, 3000);
-
-    return gameCards;
 };
