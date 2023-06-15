@@ -88,9 +88,11 @@ export const startGame = (countCard: number) => {
                                         card.classList.contains("success")
                                     )
                                 ) {
-                                    let time = stopTimer();
-                                    let secondVal = Math.floor(time) - Math.floor(time/60) * 60;
-                                    let minuteVal = Math.floor(time / 60);
+                                    const time = stopTimer();
+                                    const secondVal =
+                                        Math.floor(time) -
+                                        Math.floor(time / 60) * 60;
+                                    const minuteVal = Math.floor(time / 60);
                                     if (modalWindow) {
                                         const modalContent =
                                             modalWindow.querySelector<HTMLElement>(
@@ -126,9 +128,10 @@ export const startGame = (countCard: number) => {
                                 }
                             }, 500);
                         } else {
-                            let time = stopTimer();
-                            let secondVal = Math.floor(time) - Math.floor(time/60) * 60;
-                            let minuteVal = Math.floor(time / 60);
+                            const time = stopTimer();
+                            const secondVal =
+                                Math.floor(time) - Math.floor(time / 60) * 60;
+                            const minuteVal = Math.floor(time / 60);
                             setTimeout(() => {
                                 if (modalWindow) {
                                     const modalContent =

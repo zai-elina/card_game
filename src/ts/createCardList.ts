@@ -1,5 +1,5 @@
 import { shuffle } from "./help";
-import {startTimer} from "./timer"
+import { startTimer } from "./timer";
 
 export const createCardList = (
     cardsContainer: HTMLElement,
@@ -12,9 +12,9 @@ export const createCardList = (
     let gameCards: { [key: string]: string | number }[] = [];
 
     for (let i = 0; i < countCard / 2; i++) {
-        let obj: { [key: string]: string | number } = {};
-        let suit = cardSuit[Math.floor(Math.random() * cardSuit.length)];
-        let card = rang[Math.floor(Math.random() * rang.length)];
+        const obj: { [key: string]: string | number } = {};
+        const suit = cardSuit[Math.floor(Math.random() * cardSuit.length)];
+        const card = rang[Math.floor(Math.random() * rang.length)];
         obj[suit] = card;
         gameCards.push(obj);
         gameCards.push(obj);
@@ -52,7 +52,6 @@ export const createCardList = (
             startTimer(second, minute);
         }
     }, 3000);
-
 
     return gameCards;
 };

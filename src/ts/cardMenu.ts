@@ -54,7 +54,7 @@ export const createMenu = () => {
         const formForLevels = document.querySelector(".complexity__form");
 
         formForLevels?.addEventListener("submit", () => {
-            for (let gameLevel of gameLevels) {
+            for (const gameLevel of gameLevels) {
                 if (gameLevel.checked) {
                     window.level = +gameLevel.value;
                     let countCard;
