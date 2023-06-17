@@ -79,7 +79,7 @@ export function renderSuccessModalWindow(
     const modalContent =
         modalWindow.querySelector<HTMLElement>(".modal__content");
     modalWindow.style.display = "block";
-    modalContent!.innerHTML = `<img class="modal__image" src="./static/images/success.svg" alt="">
+    modalContent!.innerHTML = `<img class="modal__image" height="92px" src="./static/images/success.svg" alt="">
     <div class="modal__title">Вы выиграли!</div>
     <div class="modal__time">
         <div class="modal__text"> Затраченное время:</div>
@@ -106,7 +106,7 @@ export function renderFailModalWindow(
     const modalContent =
         modalWindow.querySelector<HTMLElement>(".modal__content");
     modalWindow.style.display = "block";
-    modalContent!.innerHTML = `<img class="modal__image" src="./static/images/fail.svg" alt="">
+    modalContent!.innerHTML = `<img class="modal__image" height="92px" src="./static/images/fail.svg" alt="">
     <div class="modal__title">Вы проиграли!</div>
     <div class="modal__time">
         <div class="modal__text"> Затраченное время:</div>
